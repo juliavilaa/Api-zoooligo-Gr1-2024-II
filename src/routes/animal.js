@@ -46,16 +46,16 @@ router.put("/:id", (req, res) => {
 //Eliminar un animal por su id
 
 router.delete("/:id", (req, res) => {
-      const { id } = req.params;
-      animalSchema
-        .findByIdAndDelete(id)
-        .then((data) => {
-          res.json(data);
-        })
-        .catch((error) => {
-          res.json({ message: error });
-        });
+  const { id } = req.params;
+  animalSchema
+    .findByIdAndDelete(id)
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((error) => {
+      res.json({ message: error });
     });
-    
+});
+
 
 module.exports = router;
