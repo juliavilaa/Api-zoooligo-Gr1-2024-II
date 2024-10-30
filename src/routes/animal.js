@@ -10,10 +10,11 @@ router.post("/", (req, res) => {
     .save()
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
+    
 });
 
 //Consultar todos los animales
-router.get("/",verifyToken, (req, res) => {
+router.get("/", (req, res) => {
   animalSchema
     .find()
     .then((data) => res.json(data))
